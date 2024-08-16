@@ -18,6 +18,6 @@ public class Main {
         owner = in.nextLine();
 
         BMV my_car = new BMV(model, born, owner);
-        System.out.println(my_car.getInfo()[2]);
+        System.out.println(my_car.getInfo());
     }
 }
