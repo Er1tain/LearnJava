@@ -9,6 +9,10 @@ public class Root {
 
     private JFrame root;
 
+    public JFrame getWindow() {
+        return root;
+    }
+
     public Root(String title, Integer width, Integer height) {
         if (instance) {
             try {
