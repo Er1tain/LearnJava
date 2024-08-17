@@ -1,6 +1,4 @@
-package org.example;
-
-import Cars.BMV;
+package Cars;
 
 import java.util.Scanner;
 
