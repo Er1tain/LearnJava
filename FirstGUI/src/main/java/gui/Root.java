@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
 public class Root {
     //Паттерн одиночка
@@ -36,6 +37,16 @@ public class Root {
 
     public JButton addButton(JPanel container, String text) {
         JButton button = new JButton(text);
+        container.add(button);
+        return button;
+    }
+
+    public JButton addButton(JPanel container, String text, ActionListener listener) {
+        JButton button = new JButton(text);
+
+        //Обработчик события
+        button.addActionListener(listener);
+
         container.add(button);
         return button;
     }
