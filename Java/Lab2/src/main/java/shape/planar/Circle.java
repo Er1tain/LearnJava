@@ -1,5 +1,6 @@
 package shape.planar;
 
+import shape.IShape;
 import shape.Shape;
 
 public class Circle extends Shape {
@@ -28,10 +29,10 @@ public class Circle extends Shape {
         this.x0 += delta_x; this.y0 += delta_y;
     }
 
-    @Override
-    public void Fill(String color) {
-        this.color_shape = color;
-    }
+//    @Override
+//    public void Fill(String color) {
+//        this.color_shape = color;
+//    }
 
     @Override
     public Double[][] getPoints() {
@@ -53,5 +54,15 @@ public class Circle extends Shape {
         shape_info += "Цвет: " + this.color_shape;
 
         return shape_info;
+    }
+
+    @Override
+    public Boolean equals(IShape shape) {
+        Boolean flag = true;
+        flag = ((this.getBeginPoint() == shape.getBeginPoint()) && flag);
+        flag = ((this.getPoints() == shape.getPoints()) && flag);
+        flag = (flag && (this.getColor() == shape.getColor()));
+
+        return flag;
     }
 }

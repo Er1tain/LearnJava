@@ -52,10 +52,10 @@ public class Rectangle extends Shape {
         }
     }
 
-    @Override
-    public void Fill(String color) {
-        this.color_shape = color;
-    }
+//    @Override
+//    public void Fill(String color) {
+//        this.color_shape = color;
+//    }
 
     @Override
     public String getColor() {
@@ -86,8 +86,8 @@ public class Rectangle extends Shape {
     @Override
     public Boolean equals(IShape shape) {
         Boolean flag = true;
-        flag = ((this.getPoints() == shape.getPoints()) && flag);
         flag = ((this.getBeginPoint() == shape.getBeginPoint()) && flag);
+        flag = ((this.getPoints() == shape.getPoints()) && flag);
         flag = (flag && (this.getColor() == shape.getColor()));
 
         return flag;

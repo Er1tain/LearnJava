@@ -13,9 +13,7 @@ public class ArrayShapes extends ArrayList<IShape>{
             this.add(shape);
             System.out.println("Добавлена новая уникальная фигура!\n");
             shape.toString();
-            return;
-        }
-        System.out.println("Такая фигура уже существует");
+        } else System.out.println("Такая фигура уже существует");
     }
 
 }

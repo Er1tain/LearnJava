@@ -10,10 +10,14 @@ public abstract class Shape implements IShape{
     public abstract Double Perimeter();
 
     public abstract void Move(Double delta_x, Double delta_y);
-    public  abstract void Fill(String color);
+    public void Fill(String color) {
+        this.color_shape = color_shape;
+    }
     public abstract String toString();
 
     public Double[] getBeginPoint() {
         return new Double[]{x0, y0};
     }
+
+
 }

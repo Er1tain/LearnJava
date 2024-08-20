@@ -24,10 +24,10 @@ public class Line extends Shape {
         return 0.0;
     }
 
-    @Override
-    public void Fill(String color) {
-        this.color_shape = color;
-    }
+//    @Override
+//    public void Fill(String color) {
+//        this.color_shape = color;
+//    }
 
     @Override
     public void Move(Double x, Double y) {
@@ -63,6 +63,7 @@ public class Line extends Shape {
     @Override
     public Boolean equals(IShape shape) {
         Boolean flag = true;
+        flag = ((this.getBeginPoint() == shape.getBeginPoint()) && flag);
         flag = ((this.getPoints() == shape.getPoints()) && flag);
         flag = (flag && (this.getColor() == shape.getColor()));
 
